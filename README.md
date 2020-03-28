@@ -2,7 +2,7 @@
 
 Use this application to create an history temperature graph using the blockchain.
 
-This script fetches and saves the informations every 1 minute, so you need 1.44 LYRA each day.
+This script fetches and saves the informations every 1 minute, so you need 0.144 LYRA each day because we're using low priority transactions with 0.0001 LYRA of fees.
 
 Use simple with:
 ```node index.js```

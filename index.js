@@ -28,13 +28,16 @@ if (privkey !== undefined) {
                 delete sysinfo.uuid
                 delete sysinfo.sku
                 sysinfo.temp = response
+                sysinfo.timestamp = new Date()
+
                 let dataToWrite = JSON.stringify(sysinfo)
                 let write = await scrypta.post('/write',
                     {
                         dapp_address: address,
                         private_key: privkey,
                         data: dataToWrite,
-                        collection: 'RaspTemperature'
+                        collection: 'RaspTemperature',
+                        fees: 0.0001
                     })
                 console.log('DATA WRITED')
 
